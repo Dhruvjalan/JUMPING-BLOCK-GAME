@@ -16,7 +16,7 @@ function setup(){
 
     backgroundsp.addImage(backgroundload);
     backgroundsp.scale = 1.2;
-    mblock = createSprite(280,300,30,30);
+    mblock = createSprite(610,570,30,30);
     mblock.velocityY = 12;
     mblock.velocityX = 17;
     base1 = createSprite(610,590,170,10);
@@ -78,7 +78,7 @@ function draw() {
    if(bounceOff(mblock,base1)||bounceOff(mblock,base2) || bounceOff(mblock,base3)||bounceOff(mblock,base4)){
     mblock.velocityX = random(-17,17); 
     mblock.velocityY = -1* mblock.velocityY; 
-    if(bounceOff(mblock,base2)){
+    if(bounceOff(mblock,base1)){
         mblock.velocityX = 0;
         mblock.velocityY = 0;
         music.setVolume = 0;
@@ -86,7 +86,7 @@ function draw() {
 
         if(keyWentDown("space")|| keyWentDown(UP_ARROW)){
             mblock.velocityY = -20;
-            mblock.velocityX = random(-5,5);
+            mblock.velocityX = random(-5,-10);
             music.play();
         }
     }
